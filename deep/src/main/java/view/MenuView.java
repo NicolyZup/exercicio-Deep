@@ -45,10 +45,11 @@ public class MenuView {
                     System.out.println("Informe a placa do carro que está saindo:");
                     String placaSaida = scanner.next();
 
-                    carroService.registrarSaidaCarro(placaSaida);
+                    double valorAPagar = carroService.registrarSaidaCarro(placaSaida);
+                    System.out.println("Valor a ser pago: R$"+ valorAPagar);
                     break;
                 case 4:
-
+                    carroService.consultarPermanencias();
                     break;
                 case 5:
                     System.out.println("Encerrando o programa...");
